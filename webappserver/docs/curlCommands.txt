@@ -1,0 +1,30 @@
+Curl Commands for the REST API
+==============================
+
+1.To know if the server is up, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/ping
+
+2. To get all the items, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+3. To add a food, type into the command line (note the \ is because I use windows):
+curl -i -H "Content-Type: application/json" -X POST -d {\"name\": "name", \"notes\": \"notes\",
+\"price\": \"price"\, \"weight\": \"weight\", \"expiryDate\"} localhost:8080/listAll
+
+To add a drink, type into the command line:
+curl -i -H "Content-Type: application/json" -X POST -d {\"name\": "name", \"notes\": \"notes\",
+\"price\": \"price"\, \"volume\": \"volume\", \"expiryDate\"} localhost:8080/listAll
+
+4.
+
+5. To get all expired items, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpired
+
+6. To get all the non-expired items, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listNonExpired
+
+7. To get all items expiring in 7 days, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpiringIn7Days
+
+8. To save the current items into a json file, type into the command line:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/exit
